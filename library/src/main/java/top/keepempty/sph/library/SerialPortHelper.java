@@ -1,9 +1,11 @@
 package top.keepempty.sph.library;
 
-import android.util.Log;
+
+import com.androidz.logextlibrary.Logg;
 
 /**
  * 串口助手
+ *
  * @author ：frey
  * @date：2019/3/30 18:26
  */
@@ -141,8 +143,8 @@ public class SerialPortHelper {
             sphThreads = new SphThreads(processingData);
         }else{
             mIsOpen = false;
-            Log.e(TAG,"cannot open the device !!! " +
-                    "path:"+serialPortConfig.path);
+            Logg.e(TAG, "cannot open the device !!! " +
+                    "path:" + serialPortConfig.path);
         }
         return mIsOpen;
     }
@@ -192,11 +194,11 @@ public class SerialPortHelper {
      */
     public void addCommands(SphCmdEntity sphCmdEntity){
         if(sphCmdEntity==null){
-            Log.e(TAG,"SphCmdEntity can't be null !!!");
+            Logg.e(TAG, "SphCmdEntity can't be null !!!");
             return;
         }
         if(!isOpenDevice()){
-            Log.e(TAG,"You not open device !!! ");
+            Logg.e(TAG, "You not open device !!! ");
             return;
         }
         // 开启写数据线程
