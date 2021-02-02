@@ -156,11 +156,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 Log.d(TAG, "收到命令：" + data.commandsHex);
                 receiveTxt.append(data.commandsHex).append("\n");
                 mShowReceiveTxt.setText(receiveTxt.toString());
-                serialPortHelper.addCommands("AAFFC0A3A4312E3020B5C8B4FDD6A7B8B6202020202020202020202020202020202020D6");
+//                serialPortHelper.addCommands("AAFFC0A3A4312E3020B5C8B4FDD6A7B8B6202020202020202020202020202020202020D6");
                 mShowReceiveTxt.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        serialPortHelper.addCommands("AAFFC0B5C8B4FDCFFBB7D1202020202020202020202020202020202020202020202020F3");
+//                        serialPortHelper.addCommands("AAFFC0B5C8B4FDCFFBB7D1202020202020202020202020202020202020202020202020F3");
                     }
                 }, 1500);
             }
